@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import FormattedDate from "./FormattedDate";
+
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import "./Weather.css";
 
 export default function Weather(props) {
 	const [weatherData, setWeatherData] = useState({ ready: false });
+	const [city, setCity] = useState(props.defaultCity);
+
 	function handleResponse(response) {
 		console.log(response.data);
 		setWeatherData({
@@ -16,16 +18,34 @@ export default function Weather(props) {
 			city: response.data.name,
 			iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
 			description: response.data.weather[0].description,
-			date: "Wedesday 7:00",
+
 			feel: response.data.main.feels_like,
 			date: new Date(response.data.dt * 1000),
 		});
 	}
 
+	function search() {
+		//this runs on load. It makes an API call with the city being sent from App.js
+		const apiKey = "8ccf37f47c78fce7cbde0d0a29369196";
+		let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+		axios.get(apiUrl).then(handleResponse);
+	}
+
+	function handleSubmit(event) {
+		event.preventDefault();
+		search(city);
+	}
+
+	function handleCityChange(event) {
+		//we want to store the value of the search bar inside a state
+		setCity(event.target.value);
+	}
+
 	if (weatherData.ready) {
+		//this checks if the weather data is ready, by default it is false so will be ignored on load and go to else
 		return (
 			<div className="Weather">
-				<form>
+				<form onSubmit={handleSubmit}>
 					<div className="row">
 						<div className="col-9">
 							<input
@@ -33,6 +53,7 @@ export default function Weather(props) {
 								placeholder="Enter a city..."
 								className="form-control"
 								autoFocus="on"
+								onChange={handleCityChange}
 							/>
 						</div>
 						<div className="col-3">
@@ -48,10 +69,7 @@ export default function Weather(props) {
 			</div>
 		);
 	} else {
-		const apiKey = "8ccf37f47c78fce7cbde0d0a29369196";
-		let city = "london";
-		let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-		axios.get(apiUrl).then(handleResponse);
+		search(); //this runs on load.
 		return "Loading...";
 	}
 }
