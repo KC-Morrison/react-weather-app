@@ -39,9 +39,9 @@
 	color: black;
 }
 
-.Weather .unit {
+.WeatherTemperature .unit {
 	font-weight: 400px;
 	color: black;
 	position: relative;
-	bottom: 18px;
+	top: -32px;
 }
