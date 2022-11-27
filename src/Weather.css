@@ -27,9 +27,9 @@
 .Weather .container {
 	display: flex;
 	align-items: center;
+	padding-left: 0;
 }
-.Weather img {
-	height: 64px;
+.Weather canvas {
 	margin-right: 10px;
 }
 
