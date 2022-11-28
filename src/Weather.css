@@ -29,9 +29,6 @@
 	align-items: center;
 	padding-left: 0;
 }
-.Weather canvas {
-	margin-right: 10px;
-}
 
 .Weather .temperature {
 	font-weight: 400;
