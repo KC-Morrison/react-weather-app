@@ -13,6 +13,7 @@ export default function Weather(props) {
 		console.log(response.data);
 		setWeatherData({
 			ready: true,
+			coordinates: response.data.coord, //this is to send the longitude and latitude to the forecast as that API only uses by coordinates
 			temperature: response.data.main.temp,
 			humidity: response.data.main.humidity,
 			wind: response.data.wind.speed,
@@ -66,7 +67,7 @@ export default function Weather(props) {
 					</div>
 				</form>
 				<WeatherInfo data={weatherData} />
-				<WeatherForecast />
+				<WeatherForecast coordinates={weatherData.coordinates} />
 			</div>
 		);
 	} else {
