@@ -7,7 +7,6 @@
 }
 
 .Weather h1 {
-	margin: 20px 0 0 0;
 	font-size: 24px;
 	font-weight: 100;
 	line-height: 29px;
@@ -32,13 +31,31 @@
 
 .Weather .temperature {
 	font-weight: 400;
-	font-size: 64px;
+	font-size: 45px;
 	color: black;
+	margin-left: 10px;
 }
 
 .WeatherTemperature .unit {
 	font-weight: 400px;
 	color: black;
 	position: relative;
-	top: -32px;
+	top: -22px;
+}
+
+.MainContent {
+	background-color: white;
+	opacity: 70%;
+	border-radius: 4px;
+	margin-top: 20px;
+	padding: 5px 10px;
+}
+
+.DayInfo {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.DayInfo .column {
+	padding: 0;
 }
