@@ -74,6 +74,11 @@ export default function Weather(props) {
 		);
 	} else {
 		search(); //this runs on load.
-		return "Loading...";
+		return (
+			<img
+				className="LoadImage"
+				src="https://cdn-icons-png.flaticon.com/512/7746/7746162.png"
+			/>
+		);
 	}
 }

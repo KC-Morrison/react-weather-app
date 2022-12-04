@@ -57,5 +57,10 @@
 }
 
 .DayInfo .column {
-	padding: 0;
+	padding-left: 4px;
+	padding-right: 0;
+}
+
+.LoadImage {
+	height: 100px;
 }
