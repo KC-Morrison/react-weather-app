@@ -78,6 +78,7 @@ export default function Weather(props) {
 			<img
 				className="LoadImage"
 				src="https://cdn-icons-png.flaticon.com/512/7746/7746162.png"
+				alt="person holding an umbrella"
 			/>
 		);
 	}
