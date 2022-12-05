@@ -63,3 +63,7 @@
 .WeatherInfo WeatherIcon {
 	display: inline;
 }
+
+.DayInfo p {
+	margin: 0;
+}
