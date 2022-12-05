@@ -23,11 +23,6 @@
 	line-height: 19px;
 	list-style: none;
 }
-.Weather .container {
-	display: flex;
-	align-items: center;
-	padding-left: 0;
-}
 
 .Weather .temperature {
 	font-weight: 400;
@@ -47,8 +42,8 @@
 	background-color: white;
 	opacity: 70%;
 	border-radius: 4px;
-	margin-top: 20px;
 	padding: 5px 10px;
+	text-align: center;
 }
 
 .DayInfo {
@@ -63,4 +58,8 @@
 
 .LoadImage {
 	height: 100px;
+}
+
+.WeatherInfo WeatherIcon {
+	display: inline;
 }
