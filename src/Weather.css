@@ -7,9 +7,10 @@
 }
 
 .Weather h1 {
-	font-size: 24px;
+	font-size: 36px;
 	font-weight: 100;
 	line-height: 29px;
+	font-family: "Playfair Display", serif;
 }
 
 .Weather ul {
@@ -26,8 +27,8 @@
 
 .Weather .temperature {
 	font-weight: 400;
-	font-size: 45px;
-
+	font-size: 80px;
+	font-family: "Playfair Display", serif;
 	margin-left: 10px;
 }
 
@@ -84,4 +85,15 @@
 .Search {
 	background-color: #fcf8f4;
 	border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+	.search-button {
+		background-color: #fcf8f4;
+		color: #1c5e54;
+	}
+
+	.Search {
+		background-color: #1c5e54;
+	}
 }
