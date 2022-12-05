@@ -27,23 +27,28 @@
 .Weather .temperature {
 	font-weight: 400;
 	font-size: 45px;
-	color: black;
+
 	margin-left: 10px;
+}
+
+.WeatherTemperature {
+	color: #fcf8f4;
 }
 
 .WeatherTemperature .unit {
 	font-weight: 400px;
-	color: black;
 	position: relative;
 	top: -22px;
 }
 
+.WeatherTemperature a {
+	color: #fcf8f4;
+}
+
 .MainContent {
-	background-color: white;
-	opacity: 70%;
-	border-radius: 4px;
-	padding: 5px 10px;
 	text-align: center;
+	background-color: #1c5e54;
+	color: #fcf8f4;
 }
 
 .DayInfo {
@@ -66,4 +71,17 @@
 
 .DayInfo p {
 	margin: 0;
+}
+
+.search-form {
+	margin-bottom: 20px;
+}
+.search-button {
+	background-color: #1c5e54;
+	color: #fcf8f4;
+}
+
+.Search {
+	background-color: #fcf8f4;
+	border-radius: 4px;
 }

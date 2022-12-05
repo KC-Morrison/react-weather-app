@@ -11,7 +11,7 @@ export default function WeatherInfo(props) {
 					<FormattedDate date={props.data.date} />
 				</div>
 				<div className="col">
-					<WeatherIcon code={props.data.icon} size={45} />
+					<WeatherIcon code={props.data.icon} size={45} color={"#fcf8f4"} />
 				</div>
 			</div>
 			<h1>{props.data.city}</h1>
@@ -24,8 +24,10 @@ export default function WeatherInfo(props) {
 				</div>
 				<div className="column">
 					<p>Feels like: {Math.round(props.data.feel)}°C</p>
-					<p>Humidity: {props.data.humidity}%</p>
-					<p>Wind: {props.data.wind}km/h</p>
+					<p>
+						Humidity: {props.data.humidity}% Wind: {props.data.wind}km/h{" "}
+					</p>
+					<p></p>
 				</div>
 			</div>
 		</div>
