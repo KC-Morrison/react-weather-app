@@ -1,6 +1,4 @@
 .Weather {
-	border: 1px solid #dadde1;
-	color: rgb(135, 135, 135);
 	padding: 16px;
 	margin: 30px auto 10px;
 	border-radius: 4px;
@@ -11,25 +9,18 @@
 	font-weight: 100;
 	line-height: 29px;
 	font-family: "Playfair Display", serif;
-}
-
-.Weather ul {
-	margin: 0;
-	padding: 0;
-}
-
-.Weather li {
-	font-size: 16px;
-	font-weight: 100;
-	line-height: 19px;
-	list-style: none;
+	margin-top: 10px;
 }
 
 .Weather .temperature {
 	font-weight: 400;
-	font-size: 80px;
+	font-size: 95px;
 	font-family: "Playfair Display", serif;
 	margin-left: 10px;
+}
+
+.Weather .SearchBlock {
+	margin: 0;
 }
 
 .WeatherTemperature {
@@ -39,7 +30,7 @@
 .WeatherTemperature .unit {
 	font-weight: 400px;
 	position: relative;
-	top: -22px;
+	top: -35px;
 }
 
 .WeatherTemperature a {
@@ -55,6 +46,8 @@
 .DayInfo {
 	margin-top: 10px;
 	margin-bottom: 10px;
+	position: relative;
+	bottom: 35px;
 }
 
 .DayInfo .column {
@@ -75,7 +68,7 @@
 }
 
 .search-form {
-	margin-bottom: 20px;
+	margin: 10px 0 20px 0;
 }
 .search-button {
 	background-color: #1c5e54;
@@ -85,6 +78,12 @@
 .Search {
 	background-color: #fcf8f4;
 	border-radius: 4px;
+}
+
+.TopRow {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 @media (max-width: 767px) {

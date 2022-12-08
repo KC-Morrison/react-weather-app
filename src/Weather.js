@@ -46,7 +46,7 @@ export default function Weather(props) {
 		//this checks if the weather data is ready, by default it is false so will be ignored on load and go to else
 		return (
 			<div className="Weather">
-				<div className="row">
+				<div className="row SearchBlock">
 					<div className="col-sm-12 col-md-6 Search">
 						<form onSubmit={handleSubmit} className="search-form">
 							<div className="input-group">
